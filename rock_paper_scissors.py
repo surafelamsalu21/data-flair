@@ -7,12 +7,12 @@ root.resizable(0, 0)  # To fix the size of the window
 root.title("Rock Paper Scissors")  # to set title
 root.config(bg="seashell3")  # to set a background color
 Label(root, text='Rock, Paper ,Scissors',
-      font='arial 20 bold', bg='seashell2').pack()
+      font='arial 20 bold', bg='seashell2').pack()  # root is the name of our window ,pack() used to the organized widget in form of block
 user_take = StringVar()
 Label(root, text='choose any one: rock, paper ,scissors',
       font='arial 15 bold', bg='seashell2').place(x=20, y=70)
 Entry(root, font='arial 15', textvariable=user_take,
-      bg='antiquewhite2').place(x=90, y=130)
+      bg='antiquewhite2').place(x=90, y=130)  # Entry() widget used when we want to create an input text field.
 comp_pick = random.randint(1, 3)
 if comp_pick == 1:
     comp_pick = 'rock'
@@ -50,6 +50,7 @@ def Reset():
 
 
 def Exit():
+    # root.destroy() will quit the rock paper scissors program by stopping the mainloop().
     root.destroy()
 
 
